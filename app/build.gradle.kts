@@ -6,9 +6,7 @@ import java.util.Properties
 
 // Firebase 遥测默认关闭（移植自 Rikkahub-Revised）：
 // 仅当以 -Prikkahub.enableFirebase=true 构建时才启用 Google 服务与 Crashlytics
-val enableFirebase = providers.gradleProperty("rikkahub.enableFirebase")
-    .map { it.equals("true", ignoreCase = true) }
-    .getOrElse(false)
+val enableFirebase = false
 
 plugins {
     alias(libs.plugins.android.application)
